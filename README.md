@@ -8,3 +8,16 @@ Folder Structure:
 - models/: Saved trained models
 - results/: Metrics and graphs
 - report/: Dissertation docs and notes
+
+## 📊 Experimental Results
+
+| Model                     | Accuracy (%) | Size (MB) | Notes |
+|----------------------------|--------------|-----------|-------|
+| 🧑‍🏫 Teacher (Baseline)      | **58**       | 9.19      | Best accuracy |
+| 📉 Dynamic Quantized        | **58**       | ~9.16     | Same accuracy, negligible size reduction |
+| ✂️ Pruned                   | **15.7**     | 18.02     | Failed: masks & no fine-tuning |
+| 👶 Student (Knowledge Distillation) | **55.6** | 4.04      | Smaller, reasonable accuracy |
+
+### 📈 Accuracy & Size Comparison
+
+
