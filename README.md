@@ -20,4 +20,8 @@ Folder Structure:
 
 ### 📈 Accuracy & Size Comparison
 
+### 📈 Model Accuracy Comparison
+![Accuracy](results/graphs.png)
 
+### 📦 Model Size Comparison
+![Size](results/graphs.png)
