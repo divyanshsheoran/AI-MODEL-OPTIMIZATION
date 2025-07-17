@@ -21,7 +21,7 @@ Folder Structure:
 ### 📈 Accuracy & Size Comparison
 
 ### 📈 Model Accuracy Comparison
-![Accuracy](results/graphs.png)
+![Accuracy](results/accuracy_comparison.png)
 
 ### 📦 Model Size Comparison
-![Size](results/graphs.png)
+![Size](results/size_comparison.png)
