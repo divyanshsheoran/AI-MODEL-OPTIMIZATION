@@ -1,6 +1,7 @@
 # AI Model Optimization Project
 
-This project investigates model compression techniques (quantization, pruning, distillation) to optimize large-scale AI models for deployment in resource-constrained environments. The baseline model used is MobileNetV2 on the CIFAR-10 dataset using PyTorch.
+This project explores model compression techniques — Quantization, Pruning, and Knowledge Distillation — to optimize deep learning models for deployment in resource-constrained environments.
+We experimented with MobileNetV2 and MobileNetV3 on the CIFAR-10 dataset using PyTorch.
 
 Folder Structure:
 - notebooks/: Jupyter notebooks for experiments
@@ -11,17 +12,12 @@ Folder Structure:
 
 ## 📊 Experimental Results
 
-| Model                     | Accuracy (%) | Size (MB) | Notes |
-|----------------------------|--------------|-----------|-------|
-| 🧑‍🏫 Teacher (Baseline)      | **58**       | 9.19      | Best accuracy |
-| 📉 Dynamic Quantized        | **58**       | ~9.16     | Same accuracy, negligible size reduction |
-| ✂️ Pruned                   | **15.7**     | 18.02     | Failed: masks & no fine-tuning |
-| 👶 Student (Knowledge Distillation) | **55.6** | 4.04      | Smaller, reasonable accuracy |
+| Model                          | Accuracy (%) | Size (MB) | Notes                                  |
+| ------------------------------ | ------------ | --------- | -------------------------------------- |
+|  MobileNetV2 Baseline          | **58.26**    | 9.19      | Standard training                      |
+|  MobileNetV2 Dynamic Quantized | **58.26**    | 9.19      | Same accuracy, negligible reduction    |
+|  MobileNetV2 Pruned            | **13.70**    | 18.02     | Failed: no fine-tuning, size increased |
+|  MobileNetV2 Student (KD)      | **49.78**    | 4.04      | Reduced size, accuracy drop            |
+|  MobileNetV3 Baseline          | **89.51**    | 6.25      | Data augmentation boosted accuracy     |
+|  MobileNetV3 Dynamic Quantized | **89.50**    | 4.45      | Maintained accuracy, \~29% smaller     |
 
-### 📈 Accuracy & Size Comparison
-
-### 📈 Model Accuracy Comparison
-![Accuracy](results/accuracy_comparison.png)
-
-### 📦 Model Size Comparison
-![Size](results/size_comparison.png)
